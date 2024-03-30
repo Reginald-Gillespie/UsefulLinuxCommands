@@ -16,7 +16,7 @@ find / -name "filename.txt" 2> /dev/null
 
 ## Troubleshooting / Error resolution
 
-Error:
+### Library not found error:
 ```
 ./program: error while loading shared libraries: libraryName.so.14: cannot open shared object file: No such file or directory
 ```
