@@ -12,7 +12,7 @@ Search for a file by name.
 find / -name "filename.txt" 2> /dev/null
 ```
 
----
+<br>
 
 ## Pranks
 
