@@ -12,7 +12,7 @@ find / -name "filename.txt" 2> /dev/null
 ```
 
 <br>
-## Troubleshooting / Error resolution
+## Troubleshooting // Error resolution
 
 Error:
 ```
