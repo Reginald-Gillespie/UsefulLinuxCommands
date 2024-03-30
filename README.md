@@ -4,6 +4,7 @@
 At some point when this is larger I'll organize this into folders and sections or add section links. Maybe.
 
 <br>
+
 ## Utilities
 
 Search for a file by name.
@@ -12,6 +13,7 @@ find / -name "filename.txt" 2> /dev/null
 ```
 
 <br>
+
 ## Troubleshooting // Error resolution
 
 Error:
@@ -30,6 +32,7 @@ ln -s <current library location> <where program is checking location>
 ```
 
 <br>
+
 ## Pranks
 
 Rickroll at bash startup. It runs as a silent background job while the video loads. To stop it, type `fg` and hit `Ctrl + c`
