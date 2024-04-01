@@ -7,14 +7,15 @@ At some point when this is larger I'll organize this into folders and sections o
 
 ## Utilities
 
-Search for a file by name.
+### Search for a file by name.
+
 ```bash
 find / -name "filename.txt" 2> /dev/null
 ```
 
 <br>
 
-Regenerate fstab.
+### Regenerate fstab.
 
 I was going to make a simple command for this but then I found [this](https://github.com/glacion/genfstab) standalone version of Arch's genfstab.
 
@@ -25,6 +26,26 @@ genfstab -U /
 # Write into /etc/fstab:
 # mv /etc/fstab /etc/fstab.bal
 # genfstab -L / > /etc/fstab
+```
+
+<br>
+
+### Scan QR Code.
+
+You will need to install these packages. This method uses spectacle, but you can swap oit out for ther screenshotters. I aliased this to `scan` in my bashrc.
+
+```bash
+spectacle -b -r -m none -n -o ./screenshot-temp.png >/dev/null 2>&1 && zbarimg ./screenshot-temp.png && rm ./screenshot-temp.png
+```
+
+<br>
+
+### Run with eGPU.
+
+A bit more niche but hey this is what I find useful. Add this to your bashrc and then start a program with `egpu programName` with your eGPU plugged in to run the program using the eGPU.
+
+```bash
+alias egpu="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 ```
 
 <br>
@@ -50,7 +71,11 @@ ln -s <current library location> <where program is checking location>
 
 ## Pranks
 
-Rickroll at bash startup. It runs as a silent background job while the video loads. To stop it, type `fg` and hit `Ctrl + c`
+### Rickroll at bash startup.
+
+It runs as a silent background job while the video loads. To stop it, type `fg` and hit `Ctrl + c`
+
+
 ```bash
 echo "{ mpv --quiet -vo=tct -cache-pause=no https://www.youtube.com/watch?v=dQw4w9WgXcQ & } 2>/dev/null;" >> ~/.bashrc
 ```
