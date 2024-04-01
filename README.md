@@ -14,6 +14,21 @@ find / -name "filename.txt" 2> /dev/null
 
 <br>
 
+Regenerate fstab.
+
+I was going to make a simple command for this but then I found [this](https://github.com/glacion/genfstab) standalone version of Arch's genfstab.
+
+```bash
+# Preview
+genfstab -U /
+
+# Write into /etc/fstab:
+# mv /etc/fstab /etc/fstab.bal
+# genfstab -U / > /etc/fstab
+```
+
+<br>
+
 ## Troubleshooting / Error resolution
 
 ### Library not found error:
