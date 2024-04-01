@@ -24,7 +24,7 @@ genfstab -U /
 
 # Write into /etc/fstab:
 # mv /etc/fstab /etc/fstab.bal
-# genfstab -U / > /etc/fstab
+# genfstab -L / > /etc/fstab
 ```
 
 <br>
