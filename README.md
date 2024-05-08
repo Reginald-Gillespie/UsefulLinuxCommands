@@ -69,6 +69,15 @@ ln -s <current library location> <where program is checking location>
 
 <br>
 
+### Determin if device has been power-throttled:
+Run this command:
+```bash
+vcgencmd get_throttled
+```
+Then, take the resulting hex number and throw it in [this](https://cyberchef.org/#recipe=From_Base(16)To_Base(2)Find_/_Replace(%7B'option':'Regex','string':'$'%7D,'%5C%5Cn%7C%7C%7C%7C%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C%7C%7C_%20Under-voltage%20detected%5C%5Cn%20%7C%7C%7C%7C%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C%7C_%20Arm%20frequency%20capped%5C%5Cn%20%7C%7C%7C%7C%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C_%20Currently%20throttled%5C%5Cn%20%7C%7C%7C%7C%20%20%20%20%20%20%20%20%20%20%20%20%7C_%20Soft%20temperature%20limit%20active%5C%5Cn%20%7C%7C%7C%7C_%20Under-voltage%20has%20occurred%20since%20last%20reboot%5C%5Cn%20%7C%7C%7C_%20Arm%20frequency%20capped%20has%20occurred%5C%5Cn%20%7C%7C_%20Throttling%20has%20occurred%5C%5Cn%20%7C_%20Soft%20temperature%20limit%20has%20occurred%5C%5Cn',true,false,true,false)Find_/_Replace(%7B'option':'Regex','string':'%5E%5C%5Cs'%7D,'',true,false,true,false)Comment('%7C%7C%7C%7C%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C%7C%7C_%20Under-voltage%20detected%5C%5Cn%5Cn%7C%7C%7C%7C%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C%7C_%20Arm%20frequency%20capped%5C%5Cn%5Cn%7C%7C%7C%7C%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C_%20Currently%20throttled%5C%5Cn%5Cn%7C%7C%7C%7C%20%20%20%20%20%20%20%20%20%20%20%20%7C_%20Soft%20temperature%20limit%20active%5C%5Cn%5Cn%7C%7C%7C%7C_%20Under-voltage%20has%20occurred%20since%20last%20reboot%5C%5Cn%5Cn%7C%7C%7C_%20Arm%20frequency%20capped%20has%20occurred%5C%5Cn%5Cn%7C%7C_%20Throttling%20has%20occurred%5C%5Cn%5Cn%7C_%20Soft%20temperature%20limit%20has%20occurred%5C%5Cn%5Cn')&input=MHg4MDAwMAo) decoder.
+
+<br>
+
 ## Pranks
 
 ### Rickroll at bash startup.
